@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>use of git | zangj's blog</title><meta name="author" content="zangj"><meta name="copyright" content="zangj"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="基本命令 git init git clone git config $ git config –global user.name “runoob” $ git config –global user.email &amp;#x74;&amp;#x65;&amp;#x73;&amp;#116;&amp;#64;&amp;#x72;&amp;#x75;&amp;#110;&amp;#111;&amp;#111;&amp;#x62;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;   gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="use of git">
+<meta property="og:url" content="https://youfindmeagain.github.io/2022/12/23/use-of-git/index.html">
+<meta property="og:site_name" content="zangj&#39;s blog">
+<meta property="og:description" content="基本命令 git init git clone git config $ git config –global user.name “runoob” $ git config –global user.email &amp;#x74;&amp;#x65;&amp;#x73;&amp;#116;&amp;#64;&amp;#x72;&amp;#x75;&amp;#110;&amp;#111;&amp;#111;&amp;#x62;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;   gi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img1.imgtp.com/2023/07/23/uV4pcEqF.gif">
+<meta property="article:published_time" content="2022-12-22T16:30:37.000Z">
+<meta property="article:modified_time" content="2023-10-07T07:53:09.782Z">
+<meta property="article:author" content="zangj">
+<meta property="article:tag" content="tools">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img1.imgtp.com/2023/07/23/uV4pcEqF.gif"><link rel="shortcut icon" href="/images/globle/icon.png"><link rel="canonical" href="https://youfindmeagain.github.io/2022/12/23/use-of-git/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'use of git',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-07 15:53:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 8 || hour >= 20
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/globle/touxiang.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: rgba(153,255,153,0)"><nav id="nav"><span id="blog-info"><a href="/" title="zangj's blog"><img class="site-icon" src="/images/globle/icon.png"/><span class="site-name">zangj's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">use of git</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-22T16:30:37.000Z" title="发表于 2022-12-23 00:30:37">2022-12-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-07T07:53:09.782Z" title="更新于 2023-10-07 15:53:09">2023-10-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/git/">git</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">758</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="use of git"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><ul>
+<li>git init</li>
+<li>git clone</li>
+<li>git config<ul>
+<li>$ git config –global user.name “runoob”</li>
+<li>$ git config –global user.email <a href="mailto:&#x74;&#x65;&#x73;&#116;&#64;&#x72;&#x75;&#110;&#111;&#111;&#x62;&#46;&#x63;&#111;&#109;">&#x74;&#x65;&#x73;&#116;&#64;&#x72;&#x75;&#110;&#111;&#111;&#x62;&#46;&#x63;&#111;&#109;</a></li>
+</ul>
+</li>
+<li>git add</li>
+<li>git commit</li>
+</ul>
+<h2 id="git-基本操作"><a href="#git-基本操作" class="headerlink" title="git 基本操作"></a>git 基本操作</h2><p><img src="/../images/use_of_git/basic%20operations.png" alt="basic operations"></p>
+<ul>
+<li><p>git add 可将该文件的修改添加到暂存区</p>
+<ul>
+<li>git add [file1] [file2] …</li>
+<li>git add [dir]</li>
+<li>git add .</li>
+</ul>
+</li>
+<li><p>git status 查看仓库当前的状态，显示有变更的文件。<br>-git diff</p>
+</li>
+<li><p>git commit</p>
+<ul>
+<li>git commit -m </li>
+<li>git commit [file1] [file2] … -m [message]</li>
+<li>git commit -am [message]</li>
+</ul>
+</li>
+<li><p>git reset 用于回退版本 最后加~x 参数就是回退x之前个版本</p>
+<ul>
+<li>git reset –hard HEAD 暂存区和工作区都回退到上一次版<br>  本，删除提交信息</li>
+<li>git reset –hard origin&#x2F;master 将远程的仓库同步到本地</li>
+</ul>
+</li>
+<li><p>git -rm</p>
+<ul>
+<li>git rm [file] [-f]</li>
+<li>git rm –cached <file> 如果想把文件从暂存区域移除，但仍然希望保留在当前工作目录中</li>
+</ul>
+</li>
+<li><p>git mv</p>
+</li>
+<li><p>git log </p>
+<ul>
+<li>git log [选项][分支名]<ul>
+<li>-p：显示提交的补丁（具体更改内容）。</li>
+<li>–oneline：以简洁的一行格式显示提交信息。</li>
+<li>–graph：以图形化方式显示分支和合并历史。</li>
+<li>–decorate：显示分支和标签指向的提交。</li>
+<li>–author&#x3D;&lt;作者&gt;：只显示特定作者的提交。</li>
+<li>–since&#x3D;&lt;时间&gt;：只显示指定时间之后的提交。</li>
+<li>–until&#x3D;&lt;时间&gt;：只显示指定时间之前的提交。</li>
+<li>–grep&#x3D;&lt;模式&gt;：只显示包含指定模式的提交消息。</li>
+<li>–no-merges：不显示合并提交。</li>
+<li>–stat：显示简略统计信息，包括修改的文件和行数。</li>
+<li>–abbrev-commit：使用短提交哈希值。</li>
+<li>–pretty&#x3D;&lt;格式&gt;：使用自定义的提交信息显示格式。</li>
+</ul>
+</li>
+<li>git blame [选项] &lt;文件路径&gt; #命令用于逐行显示指定文件的每一行代码是由谁在什么时候引入或修改的。<br>  -L &lt;起始行号&gt;,&lt;结束行号&gt;：只显示指定行号范围内的代码注释。<ul>
+<li>-C：对于重命名或拷贝的代码行，也进行代码行溯源。</li>
+<li>-M：对于移动的代码行，也进行代码行溯源。</li>
+<li>-C -C 或 -M -M：对于较多改动的代码行，进行更进一步的溯源。</li>
+<li>–show-stats：显示包含每个作者的行数统计信息。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>git remote 命令提供了一些用于查看、添加、重命名和删除远程仓库的功能</p>
+<ul>
+<li>git remote：列出当前仓库中已配置的远程仓库。</li>
+<li>git remote -v：列出当前仓库中已配置的远程仓库，并显示它们的 URL。</li>
+<li>git remote add <remote_name> <remote_url>：添加一个新的远程仓库。指定一个远程仓库的名称和 URL，将其添加到当前仓库中。</li>
+<li>git remote rename <old_name> <new_name>：将已配置的远程仓库重命名。</li>
+<li>git remote remove <remote_name>：从当前仓库中删除指定的远程仓库。</li>
+<li>git remote set-url <remote_name> <new_url>：修改指定远程仓库的 URL。</li>
+<li>git remote show <remote_name>：显示指定远程仓库的详细信息，包括 URL 和跟踪分支。</li>
+</ul>
+</li>
+<li><p>git fetch [origin]</p>
+</li>
+<li><p>git merge [origin]&#x2F;[branch]</p>
+</li>
+<li><p>git push</p>
+</li>
+</ul>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><p>暂时不需要</p>
+<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><p><img src="/../images/use_of_git/Workflow.png" alt="Workflow"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://youfindmeagain.github.io">zangj</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://youfindmeagain.github.io/2022/12/23/use-of-git/">https://youfindmeagain.github.io/2022/12/23/use-of-git/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://youfindmeagain.github.io" target="_blank">zangj's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/tools/">tools</a><a class="post-meta__tags" href="/tags/git/">git</a></div><div class="post_share"><div class="social-share" data-image="https://img1.imgtp.com/2023/07/23/uV4pcEqF.gif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/01/24/axb-2019-heap/" title="axb-2019-heap"><img class="cover" src="https://img1.imgtp.com/2023/07/23/uV4pcEqF.gif" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">axb-2019-heap</div></div></a></div><div class="next-post pull-right"><a href="/2022/09/24/use-of-docker/" title="use of docker"><img class="cover" src="https://img1.imgtp.com/2023/07/23/2xfIIJm6.gif" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">use of docker</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/12/24/use-of-GlibcAllInOneAndPatchelf/" title="use of glibc all in one and patchelf"><img class="cover" src="https://img1.imgtp.com/2023/07/23/uV4pcEqF.gif" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-24</div><div class="title">use of glibc all in one and patchelf</div></div></a></div><div><a href="/2022/09/24/use-of-docker/" title="use of docker"><img class="cover" src="https://img1.imgtp.com/2023/07/23/2xfIIJm6.gif" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-24</div><div class="title">use of docker</div></div></a></div><div><a href="/2022/07/24/use-of-ropper/" title="use of ropper"><img class="cover" src="https://img1.imgtp.com/2023/07/23/dk4H82Al.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-24</div><div class="title">use of ropper</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/globle/touxiang.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zangj</div><div class="author-info__description">你好</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/youfindmeagain/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/youfindmeagain/" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:3488268149@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">git 基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">分支管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">工作流程</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/24/%E5%88%9D%E8%AF%86heap/" title="初识heap"><img src="https://img1.imgtp.com/2023/07/23/dcfyAOnL.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="初识heap"/></a><div class="content"><a class="title" href="/2023/07/24/%E5%88%9D%E8%AF%86heap/" title="初识heap">初识heap</a><time datetime="2023-07-24T08:46:30.000Z" title="发表于 2023-07-24 16:46:30">2023-07-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/24/axb-2019-heap/" title="axb-2019-heap"><img src="https://img1.imgtp.com/2023/07/23/uV4pcEqF.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="axb-2019-heap"/></a><div class="content"><a class="title" href="/2023/01/24/axb-2019-heap/" title="axb-2019-heap">axb-2019-heap</a><time datetime="2023-01-24T08:38:18.000Z" title="发表于 2023-01-24 16:38:18">2023-01-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/23/use-of-git/" title="use of git"><img src="https://img1.imgtp.com/2023/07/23/uV4pcEqF.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="use of git"/></a><div class="content"><a class="title" href="/2022/12/23/use-of-git/" title="use of git">use of git</a><time datetime="2022-12-22T16:30:37.000Z" title="发表于 2022-12-23 00:30:37">2022-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/24/use-of-docker/" title="use of docker"><img src="https://img1.imgtp.com/2023/07/23/2xfIIJm6.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="use of docker"/></a><div class="content"><a class="title" href="/2022/09/24/use-of-docker/" title="use of docker">use of docker</a><time datetime="2022-09-24T12:32:50.000Z" title="发表于 2022-09-24 20:32:50">2022-09-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/24/use-of-ropper/" title="use of ropper"><img src="https://img1.imgtp.com/2023/07/23/dk4H82Al.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="use of ropper"/></a><div class="content"><a class="title" href="/2022/07/24/use-of-ropper/" title="use of ropper">use of ropper</a><time datetime="2022-07-23T17:25:31.000Z" title="发表于 2022-07-24 01:25:31">2022-07-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zangj</div><div class="footer_custom_text">你好</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
